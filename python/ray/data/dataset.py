@@ -4241,7 +4241,7 @@ class Dataset(Generic[T]):
         count = self._meta_count()
         if count is None:
             count = "?"
-        return "Dataset(num_blocks={}, num_rows={}, schema={})".format(
+        return "<Dataset num_blocks={} num_rows={} schema={}>".format(
             self._plan.initial_num_blocks(), count, schema_str
         )
 
